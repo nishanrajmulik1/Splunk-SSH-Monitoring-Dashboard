@@ -43,6 +43,7 @@ index=main sourcetype=ssh_logs ("Failed password" OR "Accepted password")
 | stats count by message
 ```
 ✅ Panel Name: Total SSH Login Attempts
+![Total SSH](./screenshots/SSH%20Login%20Attempts.png)
 
 
 🔹 Panel 2: SSH Successful vs. Failed Logins (Timechart)
@@ -52,6 +53,7 @@ index=main sourcetype=ssh_logs ("Failed password" OR "Accepted password")
 | timechart span=5m count by message
 ```
 ✅ Panel Name: SSH Login Trends
+![Login Trends](./screenshots/Timechartsplunk.png)
 
 
 🔹 Panel 3: Top SSH Users by Login Attempts
@@ -62,6 +64,7 @@ index=main sourcetype=ssh_logs ("Failed password" OR "Accepted password")
 | sort -count
 ```
 ✅ Panel Name: Top SSH Users by Login Attempts
+![SSH User](./screenshots/SSH%20Users.png)
 
 
 
@@ -73,6 +76,7 @@ index=main sourcetype=ssh_logs "Failed password"
 | sort -count
 ```
 ✅ Panel Name: Top Brute Force Attackers
+![IP](./screenshots/IP%20and%20Users.png)
 
 
 🔹 Panel 5: Users with Most Failed Logins
@@ -83,6 +87,7 @@ index=main sourcetype=ssh_logs "Failed password"
 | sort -count
 ```
 ✅ Panel Name: Top Users with Failed Logins
+![TopUsers](./screenshots/Users.png)
 
 Step 4: Save and View the Dashboard
 Click Save on the dashboard.
